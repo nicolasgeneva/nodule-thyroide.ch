@@ -312,6 +312,10 @@ $lang = [
             'a' => 'Yes. Dr Villard works in close collaboration with endocrinologists throughout Switzerland. Your endocrinologist can refer you directly for evaluation and potential treatment. After treatment, follow-up is managed jointly.'
         ],
         [
+            'q' => 'Do other physicians perform thyroid thermoablation in Switzerland?',
+            'a' => 'Yes, a few centres and practitioners offer this technique in Switzerland. However, operator experience is a critical factor in outcome quality. Scientific publications have clearly shown that a high procedure volume leads to better results: more complete nodule treatment, lower recurrence rates, shorter procedure times and fewer complications. With over 1,000 treatments performed, Dr Nicolas Villard has the greatest experience in Western Switzerland, resulting in complete destruction rates and outcomes among the best reported in the literature.'
+        ],
+        [
             'q' => 'What are the contraindications to RFA?',
             'a' => 'The main contraindications to radiofrequency are: pregnancy (microwave may be an alternative), cochlear implants, cardiac pacemakers or implanted defibrillators (microwave can be used). Severe coagulation disorders are also a relative contraindication. Each situation is individually assessed.'
         ],

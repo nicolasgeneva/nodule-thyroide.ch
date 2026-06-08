@@ -312,6 +312,10 @@ $lang = [
             'a' => 'Oui. Le Dr Villard travaille en étroite collaboration avec les endocrinologues de toute la Suisse. Votre endocrinologue peut vous adresser directement pour une évaluation et un éventuel traitement. Après le traitement, le suivi est assuré conjointement.'
         ],
         [
+            'q' => 'D\'autres médecins pratiquent-ils la thermoablation thyroïdienne en Suisse ?',
+            'a' => 'Oui, quelques centres et praticiens proposent cette technique en Suisse. Cependant, l\'expérience de l\'opérateur est un facteur déterminant pour la qualité du résultat. Des publications scientifiques ont clairement démontré qu\'un volume élevé de procédures permet d\'obtenir de meilleurs résultats : traitement plus complet du nodule, taux de récidive plus faible, durée d\'intervention plus courte et moins de complications. Avec plus de 1\'000 traitements réalisés, le Dr Nicolas Villard possède la plus grande expérience en Suisse Romande, ce qui se traduit par un taux de destruction complète et des résultats parmi les meilleurs rapportés dans la littérature.'
+        ],
+        [
             'q' => 'Quelles sont les contre-indications à la RFA ?',
             'a' => 'Les principales contre-indications à la radiofréquence sont : la grossesse (les micro-ondes peuvent être une alternative), un implant cochléaire, un stimulateur cardiaque ou défibrillateur implanté (les micro-ondes peuvent être utilisées). Les troubles sévères de la coagulation constituent également une contre-indication relative. Chaque situation est évaluée individuellement.'
         ],
