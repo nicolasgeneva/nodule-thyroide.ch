@@ -330,10 +330,14 @@ a:hover {
     background: var(--bg);
 }
 
+.benefits .container {
+    max-width: 1400px;
+}
+
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
+    gap: 24px;
     margin-top: 40px;
 }
 
