@@ -163,12 +163,11 @@ a:hover {
 
 .lang-switch {
     margin-left: 12px;
-    padding: 5px 10px;
-    border: 1px solid var(--border);
+    padding: 4px 6px;
+    border: none;
     border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-light);
+    font-size: 1.3rem;
+    line-height: 1;
     background: transparent;
     cursor: pointer;
     text-decoration: none;
@@ -176,9 +175,8 @@ a:hover {
 }
 
 .lang-switch:hover {
-    border-color: var(--primary);
-    color: var(--primary);
     background: var(--primary-bg);
+    transform: scale(1.15);
 }
 
 .hamburger {

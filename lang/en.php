@@ -3,7 +3,7 @@ $lang = [
     'lang_code' => 'en',
     'lang_name' => 'EN',
     'other_lang' => 'fr',
-    'other_lang_name' => 'FR',
+    'other_lang_name' => '🇫🇷',
     'site_title' => 'Minimally Invasive Thyroid Nodule Treatment | Dr Nicolas Villard | Geneva & Lausanne',
     'meta_description' => 'Expert in thyroid thermoablation (RFA, microwave) in Western Switzerland. Over 1,000 treatments by Dr Nicolas Villard. Consultations and procedures in Geneva (Clinique Beaulieu) and Lausanne (Medbase, Montchoisi, Amiia). No surgery, no scar.',
     'meta_keywords' => 'thyroid nodule, thyroid radiofrequency, thyroid RFA, thyroid MWA, thyroid thermoablation, microwave thyroid ablation, thyroid nodule treatment without surgery, Dr Nicolas Villard, Geneva, Lausanne, Western Switzerland, Clinique Beaulieu, Medbase, Montchoisi, Amiia, hot nodule, cold nodule, goitre',
@@ -119,7 +119,7 @@ $lang = [
     // Follow-up
     'followup_title' => 'Post-treatment follow-up',
     'followup_text_1' => 'Immediately after treatment, you will be monitored for a few hours. Occasionally, an overnight stay may be necessary.',
-    'followup_text_2' => 'Follow-up consultations with ultrasound are scheduled at 1 month, 3 months, 6 months, 12 months, then annually. These appointments are essential to ensure complete treatment and detect any regrowth or recurrence.',
+    'followup_text_2' => 'Follow-up consultations with ultrasound are scheduled at 1 month, 3 months, 6 months, 12 months, 24 months, then long-term follow-up in collaboration with your referring endocrinologist. These appointments are essential to ensure complete treatment and detect any regrowth or recurrence.',
     'followup_text_3' => 'After treatment, the nodule gradually decreases in size. Significant reduction begins approximately 1 month after the procedure.',
     'followup_text_4' => 'For autonomous ("hot") nodules, the hormonal issue is resolved immediately after treatment. Thyroid function is monitored during the first month.',
     'followup_text_5' => 'It is important that the treating physician performs or supervises follow-up ultrasounds, as they can more easily assess nodule morphology and detect incomplete treatment or signs of recurrence.',
@@ -177,7 +177,7 @@ $lang = [
     'expert_text_2' => 'He has performed <strong>over 1,000 treatments</strong> of thyroid nodules, making him the most experienced specialist in this field in Western Switzerland. He has refined the technique, notably with the systematic use of <strong>hydrodissection</strong>, ensuring optimal protection of structures adjacent to the thyroid.',
     'expert_text_3' => 'He is co-author of the <a href="https://www.sciencedirect.com/science/article/pii/S2543343126000618" target="_blank" rel="noopener">French guidelines for thyroid nodule treatment</a> published by the French Society of Radiology (SFR), CERF and CIREOL.',
     'expert_text_4' => 'He regularly presents at international conferences to share his expertise and organises training workshops for physicians several times a year.',
-    'expert_text_5' => 'He practises in several clinics in <strong>Lausanne</strong> and <strong>Geneva</strong>, in collaboration with endocrinologists throughout Switzerland.',
+    'expert_text_5' => 'He practises in several clinics in <strong>Lausanne</strong> and <strong>Geneva</strong>, in collaboration with endocrinologists throughout Switzerland. Consultations are available in French, English or German.',
     'expert_locations' => 'Consultation and treatment locations',
     'expert_location_ge_title' => 'Geneva',
     'expert_location_ge_text' => 'Consultations and procedures at <strong>Clinique Générale Beaulieu</strong><br>Chemin de Beau-Soleil 20, 1206 Geneva',
@@ -277,7 +277,7 @@ $lang = [
         ],
         [
             'q' => 'What does post-treatment follow-up involve?',
-            'a' => 'Follow-up includes consultations with ultrasound at 1 month, 3 months, 6 months, 12 months, then annually. It is important that the treating physician performs or supervises these ultrasounds, as they can more easily detect incomplete treatment or signs of recurrence.'
+            'a' => 'Follow-up includes consultations with ultrasound at 1 month, 3 months, 6 months, 12 months and 24 months, then long-term follow-up in collaboration with your referring endocrinologist. It is important that the treating physician performs or supervises these ultrasounds, as they can more easily detect incomplete treatment or signs of recurrence.'
         ],
         [
             'q' => 'What is the difference between RFA and microwave ablation?',
@@ -314,6 +314,18 @@ $lang = [
         [
             'q' => 'Do other physicians perform thyroid thermoablation in Switzerland?',
             'a' => 'Yes, a few centres and practitioners offer this technique in Switzerland. However, operator experience is a critical factor in outcome quality. Scientific publications have clearly shown that a high procedure volume leads to better results: more complete nodule treatment, lower recurrence rates, shorter procedure times and fewer complications. With over 1,000 treatments performed, Dr Nicolas Villard has the greatest experience in Western Switzerland, resulting in complete destruction rates and outcomes among the best reported in the literature.'
+        ],
+        [
+            'q' => 'What is thyroid cyst ethanol ablation and when is it indicated?',
+            'a' => 'Ethanol ablation (or ethanol sclerotherapy) is the treatment of choice for thyroid nodules with a predominantly cystic component — those containing mainly fluid. The procedure involves aspirating the cyst fluid under ultrasound guidance, then injecting a small amount of concentrated medical-grade ethanol into the residual cavity. The alcohol causes sclerosis of the inner cyst wall, preventing fluid reaccumulation. Efficacy is generally excellent from the first session, with a success rate exceeding 80%. For mixed nodules (part solid, part cystic), ethanol ablation can be combined with thermoablation in the same session.'
+        ],
+        [
+            'q' => 'Is ethanol ablation painful? What are the risks?',
+            'a' => 'Ethanol ablation is generally well tolerated under local anaesthesia. A brief sensation of warmth or tingling may be felt during the ethanol injection. Side effects are similar to thermoablation: mild bruising and transient neck discomfort. The main risk is ethanol leakage outside the cyst, which can cause local pain and transient inflammation. This risk is minimised by precise ultrasound guidance and operator experience.'
+        ],
+        [
+            'q' => 'What is microwave ablation (MWA) and what are its indications?',
+            'a' => 'Microwave ablation (MWA) is a thermoablation technique that uses an electromagnetic field to generate heat at the needle tip. Its efficacy and safety are comparable to radiofrequency ablation (RFA). Its main advantage is that it does not require adhesive pads on the thighs and can be used in patients with cardiac pacemakers, implanted defibrillators, cochlear implants, or during pregnancy — situations where RFA is contraindicated. Dr Villard is proficient in both technologies and selects the most appropriate one for each patient.'
         ],
         [
             'q' => 'What are the contraindications to RFA?',

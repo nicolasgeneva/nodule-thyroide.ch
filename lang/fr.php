@@ -3,7 +3,7 @@ $lang = [
     'lang_code' => 'fr',
     'lang_name' => 'FR',
     'other_lang' => 'en',
-    'other_lang_name' => 'EN',
+    'other_lang_name' => '🇬🇧',
     'site_title' => 'Traitement mini-invasif des nodules thyroïdiens | Dr Nicolas Villard | Genève & Lausanne',
     'meta_description' => 'Expert en thermoablation (RFA, micro-ondes) des nodules thyroïdiens en Suisse Romande. Plus de 1000 traitements réalisés par le Dr Nicolas Villard. Consultations et interventions à Genève (Clinique Beaulieu) et Lausanne (Medbase, Montchoisi, Amiia). Sans chirurgie, sans cicatrice.',
     'meta_keywords' => 'nodule thyroïdien, radiofréquence thyroïde, RFA thyroïde, MWA thyroïde, thermoablation thyroïde, micro-ondes thyroïde, traitement nodule thyroïde sans chirurgie, Dr Nicolas Villard, Genève, Lausanne, Suisse Romande, Clinique Beaulieu, Medbase, Montchoisi, Amiia, nodule chaud, nodule froid, goitre, ablation thyroïde',
@@ -119,7 +119,7 @@ $lang = [
     // Follow-up
     'followup_title' => 'Suivi après traitement',
     'followup_text_1' => 'Immédiatement après le traitement, vous serez surveillé quelques heures. Parfois, une hospitalisation d\'une nuit est nécessaire.',
-    'followup_text_2' => 'L\'opérateur va ensuite vous revoir en consultation à 1 mois, 3 mois, 6 mois, 12 mois puis chaque année. Ces rendez-vous sont très importants car ils permettent de s\'assurer que le nodule a été traité complètement et qu\'il n\'y a pas de repousse ou de récidive.',
+    'followup_text_2' => 'L\'opérateur va ensuite vous revoir en consultation à 1 mois, 3 mois, 6 mois, 12 mois, 24 mois puis un suivi à long terme en collaboration avec votre endocrinologue référent. Ces rendez-vous sont très importants car ils permettent de s\'assurer que le nodule a été traité complètement et qu\'il n\'y a pas de repousse ou de récidive.',
     'followup_text_3' => 'Après traitement, le nodule va progressivement diminuer de taille. Cette réduction commence à être significative environ 1 mois après la procédure.',
     'followup_text_4' => 'En cas de nodule autonome (« chaud »), la situation est résolue dès traitement du nodule. La fonction thyroïdienne est surveillée durant le premier mois.',
     'followup_text_5' => 'Il est important que l\'opérateur réalise ou supervise l\'échographie de suivi car il pourra plus facilement analyser la morphologie du nodule et détecter un traitement incomplet ou des signes de récidive.',
@@ -177,7 +177,7 @@ $lang = [
     'expert_text_2' => 'Il a réalisé <strong>plus de 1\'000 traitements</strong> de nodules thyroïdiens et possède ainsi la plus grande expérience pour cette thématique en Suisse Romande. Il a raffiné la technique, notamment avec l\'usage systématique de l\'<strong>hydrodissection</strong>, permettant une protection optimale des structures voisines de la thyroïde.',
     'expert_text_3' => 'Il est co-auteur des <a href="https://www.sciencedirect.com/science/article/pii/S2543343126000618" target="_blank" rel="noopener">recommandations françaises de traitement des nodules thyroïdiens</a> de la Société Française de Radiologie (SFR), du CERF et du CIREOL.',
     'expert_text_4' => 'Il intervient régulièrement dans des congrès internationaux pour partager son expertise et organise plusieurs fois par année des workshops de formation et de perfectionnement.',
-    'expert_text_5' => 'Il exerce cette activité dans plusieurs cliniques, à <strong>Lausanne</strong> et à <strong>Genève</strong>, en collaboration avec les endocrinologues dans toute la Suisse.',
+    'expert_text_5' => 'Il exerce cette activité dans plusieurs cliniques, à <strong>Lausanne</strong> et à <strong>Genève</strong>, en collaboration avec les endocrinologues dans toute la Suisse. Les consultations peuvent être réalisées en français, anglais ou allemand.',
     'expert_locations' => 'Lieux de consultation et de traitement',
     'expert_location_ge_title' => 'Genève',
     'expert_location_ge_text' => 'Consultations et interventions à la <strong>Clinique Générale Beaulieu</strong><br>Chemin de Beau-Soleil 20, 1206 Genève',
@@ -277,7 +277,7 @@ $lang = [
         ],
         [
             'q' => 'Comment se passe le suivi après traitement ?',
-            'a' => 'Le suivi comprend des consultations avec échographie à 1 mois, 3 mois, 6 mois, 12 mois puis annuellement. Il est important que l\'opérateur réalise ou supervise ces échographies car il détectera plus facilement un traitement incomplet ou des signes de récidive.'
+            'a' => 'Le suivi comprend des consultations avec échographie à 1 mois, 3 mois, 6 mois, 12 mois et 24 mois, puis un suivi à long terme en collaboration avec votre endocrinologue référent. Il est important que l\'opérateur réalise ou supervise ces échographies car il détectera plus facilement un traitement incomplet ou des signes de récidive.'
         ],
         [
             'q' => 'Quelle est la différence entre la RFA et les micro-ondes ?',
@@ -314,6 +314,18 @@ $lang = [
         [
             'q' => 'D\'autres médecins pratiquent-ils la thermoablation thyroïdienne en Suisse ?',
             'a' => 'Oui, quelques centres et praticiens proposent cette technique en Suisse. Cependant, l\'expérience de l\'opérateur est un facteur déterminant pour la qualité du résultat. Des publications scientifiques ont clairement démontré qu\'un volume élevé de procédures permet d\'obtenir de meilleurs résultats : traitement plus complet du nodule, taux de récidive plus faible, durée d\'intervention plus courte et moins de complications. Avec plus de 1\'000 traitements réalisés, le Dr Nicolas Villard possède la plus grande expérience en Suisse Romande, ce qui se traduit par un taux de destruction complète et des résultats parmi les meilleurs rapportés dans la littérature.'
+        ],
+        [
+            'q' => 'Qu\'est-ce que l\'alcoolisation d\'un kyste thyroïdien et quand est-elle indiquée ?',
+            'a' => 'L\'alcoolisation (ou sclérothérapie à l\'éthanol) est le traitement de choix pour les nodules thyroïdiens à composante kystique prédominante, c\'est-à-dire contenant principalement du liquide. Le geste consiste à aspirer le contenu liquide du kyste sous contrôle échographique, puis à injecter une petite quantité d\'éthanol médical concentré dans la cavité résiduelle. L\'alcool provoque une sclérose de la paroi interne du kyste, empêchant la réaccumulation de liquide. L\'efficacité est généralement excellente dès la première séance, avec un taux de succès supérieur à 80 %. En cas de nodule mixte (partie solide et partie kystique), l\'alcoolisation peut être combinée avec la thermoablation lors de la même séance.'
+        ],
+        [
+            'q' => 'L\'alcoolisation est-elle douloureuse ? Quels sont les risques ?',
+            'a' => 'L\'alcoolisation est en général bien tolérée sous anesthésie locale. Une sensation de chaleur ou de picotement peut être ressentie pendant l\'injection d\'éthanol, mais elle est brève. Les effets secondaires sont similaires à ceux de la thermoablation : léger hématome et gêne cervicale passagère. Le risque principal est une fuite d\'éthanol hors du kyste, pouvant entraîner une douleur locale et une inflammation transitoire. Ce risque est minimisé par un guidage échographique précis et l\'expérience de l\'opérateur.'
+        ],
+        [
+            'q' => 'Qu\'est-ce que l\'ablation par micro-ondes (MWA) et quelles sont ses indications ?',
+            'a' => 'L\'ablation par micro-ondes (MWA, Microwave Ablation) est une technique de thermoablation qui utilise un champ électromagnétique pour produire de la chaleur à l\'extrémité de l\'aiguille. Son efficacité et sa sécurité sont comparables à la radiofréquence (RFA). Son principal avantage est qu\'elle ne nécessite pas la pose de patchs sur les cuisses et qu\'elle peut être utilisée chez les patients porteurs d\'un stimulateur cardiaque (pacemaker), d\'un défibrillateur implanté, d\'un implant cochléaire, ou pendant la grossesse — situations dans lesquelles la RFA est contre-indiquée. Le Dr Villard maîtrise les deux technologies et choisit la plus adaptée à chaque patient.'
         ],
         [
             'q' => 'Quelles sont les contre-indications à la RFA ?',
