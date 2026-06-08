@@ -298,7 +298,7 @@ $lang = [
         ],
         [
             'q' => 'Comment prendre rendez-vous ?',
-            'a' => 'Vous pouvez prendre rendez-vous pour une consultation à Genève ou à Lausanne en contactant directement le secrétariat du Dr Villard. Il est recommandé de venir avec une échographie récente et les résultats d\'éventuelles cytoponctions déjà réalisées, ainsi qu\'un bilan sanguin thyroïdien récent (TSH, T3, T4).'
+            'a' => 'Vous pouvez prendre rendez-vous pour une consultation à Genève ou à Lausanne en contactant directement le secrétariat du Dr Villard ou via le widget de prise de rendez-vous en ligne. Merci de faire parvenir au secrétariat vos résultats récents (échographie, cytoponction, bilan sanguin thyroïdien (TSH, T3, T4)).'
         ],
         [
             'q' => 'La RFA est-elle une technique nouvelle ?',
@@ -319,7 +319,7 @@ $lang = [
     'contact_text' => 'Pour une consultation à Genève ou à Lausanne, contactez le secrétariat du Dr Villard.',
     'contact_phone' => 'Téléphone',
     'contact_email' => 'Email',
-    'contact_tip' => 'Merci de vous munir d\'une échographie récente, des résultats de cytoponction et d\'un bilan sanguin thyroïdien (TSH, T3, T4).',
+    'contact_tip' => 'Merci de faire parvenir au secrétariat vos résultats récents (échographie, cytoponction, bilan sanguin thyroïdien (TSH, T3, T4)).',
 
     // Footer
     'footer_copyright' => '© 2026 Dr Nicolas Villard — Radiologie interventionnelle',

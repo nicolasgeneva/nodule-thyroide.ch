@@ -298,7 +298,7 @@ $lang = [
         ],
         [
             'q' => 'How can I book an appointment?',
-            'a' => 'You can book a consultation in Geneva or Lausanne by contacting Dr Villard\'s office directly. We recommend bringing a recent ultrasound, any previous fine-needle aspiration results, and a recent thyroid blood test (TSH, T3, T4).'
+            'a' => 'You can book a consultation in Geneva or Lausanne by contacting Dr Villard\'s office directly or via the online booking widget. Please send your recent results (ultrasound, fine-needle aspiration, thyroid blood test (TSH, T3, T4)) to the office prior to your appointment.'
         ],
         [
             'q' => 'Is RFA a new technique?',
@@ -319,7 +319,7 @@ $lang = [
     'contact_text' => 'For a consultation in Geneva or Lausanne, contact Dr Villard\'s office.',
     'contact_phone' => 'Phone',
     'contact_email' => 'Email',
-    'contact_tip' => 'Please bring a recent ultrasound, fine-needle aspiration results and a recent thyroid blood test (TSH, T3, T4).',
+    'contact_tip' => 'Please send your recent results (ultrasound, fine-needle aspiration, thyroid blood test (TSH, T3, T4)) to the office prior to your appointment.',
 
     // Footer
     'footer_copyright' => '© 2026 Dr Nicolas Villard — Interventional Radiology',
