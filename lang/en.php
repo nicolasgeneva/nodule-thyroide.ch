@@ -172,7 +172,7 @@ $lang = [
     // Expert section
     'expert_title' => 'Your expert',
     'expert_name' => 'Dr Nicolas Villard',
-    'expert_role' => 'Interventional Radiologist',
+    'expert_role' => 'Interventional Radiologist specialising in thyroid',
     'expert_text_1' => 'Dr Nicolas Villard is a Swiss physician specialised in interventional radiology with internationally recognised expertise in minimally invasive thyroid treatments.',
     'expert_text_2' => 'He has performed <strong>over 1,000 treatments</strong> of thyroid nodules, making him the most experienced specialist in this field in Western Switzerland. He has refined the technique, notably with the systematic use of <strong>hydrodissection</strong>, ensuring optimal protection of structures adjacent to the thyroid.',
     'expert_text_3' => 'He is co-author of the <a href="https://www.sciencedirect.com/science/article/pii/S2543343126000618" target="_blank" rel="noopener">French guidelines for thyroid nodule treatment</a> published by the French Society of Radiology (SFR), CERF and CIREOL.',

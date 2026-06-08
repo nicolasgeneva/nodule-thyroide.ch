@@ -172,7 +172,7 @@ $lang = [
     // Expert section
     'expert_title' => 'Votre expert',
     'expert_name' => 'Dr Nicolas Villard',
-    'expert_role' => 'Radiologue interventionnel',
+    'expert_role' => 'Radiologue interventionnel spécialiste de la thyroïde',
     'expert_text_1' => 'Le Dr Nicolas Villard est un médecin suisse spécialisé en radiologie interventionnelle avec une expertise internationalement reconnue pour les traitements mini-invasifs de la thyroïde.',
     'expert_text_2' => 'Il a réalisé <strong>plus de 1\'000 traitements</strong> de nodules thyroïdiens et possède ainsi la plus grande expérience pour cette thématique en Suisse Romande. Il a raffiné la technique, notamment avec l\'usage systématique de l\'<strong>hydrodissection</strong>, permettant une protection optimale des structures voisines de la thyroïde.',
     'expert_text_3' => 'Il est co-auteur des <a href="https://www.sciencedirect.com/science/article/pii/S2543343126000618" target="_blank" rel="noopener">recommandations françaises de traitement des nodules thyroïdiens</a> de la Société Française de Radiologie (SFR), du CERF et du CIREOL.',

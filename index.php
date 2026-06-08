@@ -46,6 +46,11 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
     <meta name="geo.position" content="46.2044;6.1432">
     <meta name="ICBM" content="46.2044, 6.1432">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -185,7 +190,7 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
 <!-- ===================== HEADER ===================== -->
 <header class="header" role="banner">
     <div class="header-inner">
-        <a href="/<?= $current_lang ?>" class="logo">nodule-thyroide<span>.ch</span></a>
+        <a href="/<?= $current_lang ?>" class="logo"><img src="/images/icon.png" alt="" class="logo-icon">nodule-thyroide<span>.ch</span></a>
         <nav class="nav" role="navigation" aria-label="<?= $current_lang === 'fr' ? 'Navigation principale' : 'Main navigation' ?>">
             <a href="#thyroide"><?= $lang['nav_thyroid'] ?></a>
             <a href="#nodules"><?= $lang['nav_nodules'] ?></a>

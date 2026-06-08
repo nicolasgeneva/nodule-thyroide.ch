@@ -89,10 +89,18 @@ a:hover {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--primary);
     letter-spacing: -0.02em;
+}
+
+.logo-icon {
+    height: 28px;
+    width: auto;
 }
 
 .logo span {
