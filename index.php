@@ -190,7 +190,7 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
 <!-- ===================== HEADER ===================== -->
 <header class="header" role="banner">
     <div class="header-inner">
-        <a href="/<?= $current_lang ?>" class="logo"><img src="/images/icon.png" alt="" class="logo-icon">nodule-thyroide<span class="logo-tld">.ch</span></a>
+        <a href="/<?= $current_lang ?>" class="logo"><img src="/images/icon.png" alt="" class="logo-icon">nodule-thyroide.ch</a>
         <nav class="nav" role="navigation" aria-label="<?= $current_lang === 'fr' ? 'Navigation principale' : 'Main navigation' ?>">
             <a href="#thyroide"><?= $lang['nav_thyroid'] ?></a>
             <a href="#nodules"><?= $lang['nav_nodules'] ?></a>

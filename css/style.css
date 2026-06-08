@@ -99,17 +99,10 @@ a:hover {
 }
 
 .logo-icon {
-    height: 34px;
+    height: 42px;
     width: auto;
 }
 
-.logo-tld {
-    margin-left: -0.15em;
-}
-
-.logo .logo-tld {
-    color: var(--accent);
-}
 
 .nav {
     display: flex;
