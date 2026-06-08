@@ -711,43 +711,35 @@ a:hover {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .locations {
     margin-top: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 40px;
 }
 
-.location-card {
-    background: var(--white);
-    padding: 28px;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--primary-light);
+.location-block {
     display: flex;
     flex-direction: column;
     gap: 0;
-    transition: box-shadow var(--transition), transform var(--transition);
 }
 
-.location-card:hover {
-    box-shadow: 0 4px 20px rgba(26, 82, 118, 0.1);
-    transform: translateY(-2px);
-}
-
-.location-header {
+.location-city {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--border);
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary-light);
 }
 
-.location-header svg {
+.location-city svg {
     width: 22px;
     height: 22px;
     stroke: var(--primary-light);
@@ -756,33 +748,45 @@ a:hover {
     flex-shrink: 0;
 }
 
-.location-title {
-    font-size: 1.15rem;
+.location-entry {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.location-entry:last-child {
+    border-bottom: none;
+}
+
+.location-label {
+    display: inline-block;
+    font-size: 0.72rem;
     font-weight: 700;
-    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-light);
+    background: var(--bg-blue);
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 8px;
 }
 
-.location-body {
-    flex: 1;
-}
-
-.location-detail {
-    font-size: 0.88rem;
-    line-height: 1.7;
+.location-address {
+    font-size: 0.9rem;
+    line-height: 1.6;
     color: var(--text);
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
-.location-detail:last-child {
+.location-address:last-of-type {
     margin-bottom: 0;
 }
 
 .location-map-link {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 16px;
-    font-size: 0.82rem;
+    gap: 5px;
+    margin-top: 8px;
+    font-size: 0.78rem;
     font-weight: 600;
     color: var(--primary-light);
     text-decoration: none;
