@@ -120,27 +120,61 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
                 "name": "Dr Nicolas Villard — Radiologie interventionnelle",
                 "url": "<?= $base_url ?>",
                 "image": "<?= $base_url ?>/images/nicolas-villard.jpg",
+                "telephone": "+41582553144",
+                "email": "secretariat@drvillard.ch",
                 "priceRange": "Pris en charge LAMal",
                 "address": [
                     {
                         "@type": "PostalAddress",
+                        "name": "Clinique Générale Beaulieu",
+                        "streetAddress": "Chemin de Beau-Soleil 20",
+                        "postalCode": "1206",
                         "addressLocality": "Genève",
                         "addressRegion": "GE",
                         "addressCountry": "CH"
                     },
                     {
                         "@type": "PostalAddress",
+                        "name": "Medbase Lausanne",
+                        "streetAddress": "Place de la Gare 9a-11",
+                        "postalCode": "1003",
+                        "addressLocality": "Lausanne",
+                        "addressRegion": "VD",
+                        "addressCountry": "CH"
+                    },
+                    {
+                        "@type": "PostalAddress",
+                        "name": "Clinique Montchoisi",
+                        "streetAddress": "Chemin des Allinges 10",
+                        "postalCode": "1006",
+                        "addressLocality": "Lausanne",
+                        "addressRegion": "VD",
+                        "addressCountry": "CH"
+                    },
+                    {
+                        "@type": "PostalAddress",
+                        "name": "Clinique Amiia",
+                        "streetAddress": "Rue Centrale 19",
+                        "postalCode": "1003",
                         "addressLocality": "Lausanne",
                         "addressRegion": "VD",
                         "addressCountry": "CH"
                     }
                 ],
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 46.2044,
-                    "longitude": 6.1432
-                },
-                "areaServed": "Suisse Romande"
+                "geo": [
+                    {
+                        "@type": "GeoCoordinates",
+                        "latitude": 46.1988,
+                        "longitude": 6.1615
+                    },
+                    {
+                        "@type": "GeoCoordinates",
+                        "latitude": 46.5167,
+                        "longitude": 6.6294
+                    }
+                ],
+                "areaServed": "Suisse Romande",
+                "medicalSpecialty": "Interventional Radiology"
             }
         ]
     }
@@ -506,13 +540,20 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
                 <div class="location-icon">
                     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
-                <p><strong>Genève</strong></p>
+                <div>
+                    <p class="location-title"><?= $lang['expert_location_ge_title'] ?></p>
+                    <p class="location-detail"><?= $lang['expert_location_ge_text'] ?></p>
+                </div>
             </div>
             <div class="location-card">
                 <div class="location-icon">
                     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
-                <p><strong>Lausanne</strong></p>
+                <div>
+                    <p class="location-title"><?= $lang['expert_location_la_title'] ?></p>
+                    <p class="location-detail"><?= $lang['expert_location_la_consult'] ?></p>
+                    <p class="location-detail"><?= $lang['expert_location_la_interv'] ?></p>
+                </div>
             </div>
         </div>
 

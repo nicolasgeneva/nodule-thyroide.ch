@@ -738,10 +738,22 @@ a:hover {
     stroke-width: 2;
 }
 
-.location-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    padding-top: 8px;
+.location-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.location-detail {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.location-detail:last-child {
+    margin-bottom: 0;
 }
 
 /* ===================== FAQ ===================== */
