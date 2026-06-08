@@ -1,0 +1,48 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Redirect thyroide.ch to nodule-thyroide.ch
+RewriteCond %{HTTP_HOST} ^(www\.)?thyroide\.ch$ [NC]
+RewriteRule ^(.*)$ https://nodule-thyroide.ch/$1 [R=301,L]
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Browser caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json
+</IfModule>
+
+# Deny access to sensitive files
+<FilesMatch "\.(env|md|gitignore)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to lang directory
+<IfModule mod_rewrite.c>
+    RewriteRule ^lang/ - [F,L]
+</IfModule>

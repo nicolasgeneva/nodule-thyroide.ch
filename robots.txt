@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /lang/
+Disallow: /ressources/
+
+Sitemap: https://nodule-thyroide.ch/sitemap.xml
