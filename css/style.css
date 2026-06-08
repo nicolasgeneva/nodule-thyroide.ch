@@ -103,6 +103,10 @@ a:hover {
     width: auto;
 }
 
+.logo span {
+    color: var(--accent);
+}
+
 
 .nav {
     display: flex;
