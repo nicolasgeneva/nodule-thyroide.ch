@@ -650,9 +650,9 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
         <h2 class="section-title text-center"><?= $current_lang === 'fr' ? 'Prendre rendez-vous en ligne' : 'Book an appointment online' ?></h2>
         <p class="section-subtitle" style="text-align:center;margin:0 auto 32px;"><?= $current_lang === 'fr' ? 'Sélectionnez un créneau directement en ligne pour une consultation à Genève ou Lausanne.' : 'Select a time slot online for a consultation in Geneva or Lausanne.' ?></p>
         <iframe id="janus-widget"
-            src="https://januswidget.villard.swiss/rendez-vous/dr/5?lang=<?= $current_lang ?>"
+            src="https://janus-widget.infos-f46.workers.dev/rendez-vous/dr/5"
             style="width:100%;min-height:600px;border:none;border-radius:12px;"
-            loading="lazy"
+            allowfullscreen=""
             title="<?= $current_lang === 'fr' ? 'Prise de rendez-vous en ligne' : 'Online appointment booking' ?>">
         </iframe>
     </div>
