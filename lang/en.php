@@ -37,6 +37,8 @@ $lang = [
     'benefit_4_text' => 'Treatment reimbursed by mandatory health insurance (LAMal) in Switzerland',
     'benefit_5_title' => 'Thyroid preserved',
     'benefit_5_text' => 'Thyroid function maintained after treatment — no need for lifelong hormone replacement',
+    'benefit_6_title' => 'Recognised expertise',
+    'benefit_6_text' => 'Over 1,000 treatments performed by Dr Villard, co-author of the French national guidelines',
 
     // Thyroid section
     'thyroid_title' => 'What is the thyroid?',

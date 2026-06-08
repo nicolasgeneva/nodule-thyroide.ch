@@ -37,6 +37,8 @@ $lang = [
     'benefit_4_text' => 'Traitement remboursé par l\'assurance de base en Suisse',
     'benefit_5_title' => 'Thyroïde préservée',
     'benefit_5_text' => 'Fonction thyroïdienne conservée après traitement, pas de traitement hormonal substitutif',
+    'benefit_6_title' => 'Expertise reconnue',
+    'benefit_6_text' => 'Plus de 1\'000 traitements réalisés par le Dr Villard, co-auteur des recommandations françaises',
 
     // Thyroid section
     'thyroid_title' => 'Qu\'est-ce que la thyroïde ?',

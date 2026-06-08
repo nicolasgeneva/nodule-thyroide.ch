@@ -264,6 +264,13 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
                 <h3><?= $lang['benefit_5_title'] ?></h3>
                 <p><?= $lang['benefit_5_text'] ?></p>
             </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h3><?= $lang['benefit_6_title'] ?></h3>
+                <p><?= $lang['benefit_6_text'] ?></p>
+            </div>
         </div>
     </div>
 </section>
