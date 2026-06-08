@@ -630,15 +630,28 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
     <div class="container">
         <h2><?= $lang['contact_title'] ?></h2>
         <p><?= $lang['contact_text'] ?></p>
-        <div class="cta-contact-info">
-            <div class="cta-contact-item">
-                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span><?= $lang['contact_phone'] ?> : <a href="tel:+41582553144">+41 58 255 3 144</a></span>
-            </div>
-            <div class="cta-contact-item">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span><?= $lang['contact_email'] ?> : <a href="mailto:secretariat@drvillard.ch">secretariat@drvillard.ch</a></span>
-            </div>
+        <div class="cta-cards">
+            <a href="tel:+41582553144" class="cta-card">
+                <div class="cta-card-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <span class="cta-card-label"><?= $lang['contact_phone'] ?></span>
+                <span class="cta-card-value">+41 58 255 3 144</span>
+            </a>
+            <a href="mailto:secretariat@drvillard.ch" class="cta-card">
+                <div class="cta-card-icon">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <span class="cta-card-label"><?= $lang['contact_email'] ?></span>
+                <span class="cta-card-value">secretariat@drvillard.ch</span>
+            </a>
+            <a href="#rdv" class="cta-card cta-card-accent">
+                <div class="cta-card-icon">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <span class="cta-card-label"><?= $current_lang === 'fr' ? 'En ligne' : 'Online' ?></span>
+                <span class="cta-card-value"><?= $current_lang === 'fr' ? 'Réserver un créneau' : 'Book a slot' ?></span>
+            </a>
         </div>
         <p class="cta-tip"><?= $lang['contact_tip'] ?></p>
     </div>
