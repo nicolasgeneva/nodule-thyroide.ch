@@ -103,7 +103,7 @@ a:hover {
     width: auto;
 }
 
-.logo span {
+.logo-tld {
     color: var(--accent);
 }
 
@@ -172,20 +172,20 @@ a:hover {
 
 .lang-switch {
     margin-left: 12px;
-    padding: 4px 6px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.3rem;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1.6rem;
     line-height: 1;
-    background: transparent;
+    background: var(--white);
     cursor: pointer;
     text-decoration: none;
     transition: all var(--transition);
 }
 
 .lang-switch:hover {
-    background: var(--primary-bg);
-    transform: scale(1.15);
+    border-color: var(--primary-light);
+    background: var(--bg-blue);
 }
 
 .hamburger {
