@@ -5,9 +5,29 @@ document.addEventListener('DOMContentLoaded', function() {
     var navLinks = document.querySelectorAll('.nav a');
     var faqItems = document.querySelectorAll('.faq-item');
 
+    var sectionLinks = document.querySelectorAll('.nav a[href^="#"]');
+    var sections = [];
+    sectionLinks.forEach(function(link) {
+        var id = link.getAttribute('href').substring(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ link: link, el: el });
+    });
+
+    function updateActiveNav() {
+        var scrollPos = window.scrollY + 120;
+        var current = null;
+        sections.forEach(function(s) {
+            if (s.el.offsetTop <= scrollPos) current = s;
+        });
+        sectionLinks.forEach(function(l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+    }
+
     window.addEventListener('scroll', function() {
         header.classList.toggle('scrolled', window.scrollY > 50);
+        updateActiveNav();
     });
+    updateActiveNav();
 
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
