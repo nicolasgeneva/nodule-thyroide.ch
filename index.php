@@ -534,26 +534,34 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
         </div>
 
         <!-- Locations -->
-        <h3 style="font-size:1.2rem; font-weight:700; color:var(--primary); margin-bottom:20px;"><?= $lang['expert_locations'] ?></h3>
+        <h3 class="locations-heading"><?= $lang['expert_locations'] ?></h3>
         <div class="locations">
             <div class="location-card">
-                <div class="location-icon">
+                <div class="location-header">
                     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span class="location-title"><?= $lang['expert_location_ge_title'] ?></span>
                 </div>
-                <div>
-                    <p class="location-title"><?= $lang['expert_location_ge_title'] ?></p>
+                <div class="location-body">
                     <p class="location-detail"><?= $lang['expert_location_ge_text'] ?></p>
                 </div>
+                <a href="https://maps.google.com/?q=Clinique+Générale+Beaulieu+Chemin+de+Beau-Soleil+20+1206+Genève" target="_blank" rel="noopener" class="location-map-link">
+                    <svg viewBox="0 0 24 24" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <?= $current_lang === 'fr' ? 'Voir sur Google Maps' : 'View on Google Maps' ?>
+                </a>
             </div>
             <div class="location-card">
-                <div class="location-icon">
+                <div class="location-header">
                     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span class="location-title"><?= $lang['expert_location_la_title'] ?></span>
                 </div>
-                <div>
-                    <p class="location-title"><?= $lang['expert_location_la_title'] ?></p>
+                <div class="location-body">
                     <p class="location-detail"><?= $lang['expert_location_la_consult'] ?></p>
                     <p class="location-detail"><?= $lang['expert_location_la_interv'] ?></p>
                 </div>
+                <a href="https://maps.google.com/?q=Medbase+Lausanne+Place+de+la+Gare+9a+1003+Lausanne" target="_blank" rel="noopener" class="location-map-link">
+                    <svg viewBox="0 0 24 24" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <?= $current_lang === 'fr' ? 'Voir sur Google Maps' : 'View on Google Maps' ?>
+                </a>
             </div>
         </div>
 

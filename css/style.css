@@ -707,57 +707,96 @@ a:hover {
     font-weight: 500;
 }
 
+.locations-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 24px;
+}
+
 .locations {
-    margin-top: 32px;
+    margin-top: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 24px;
 }
 
 .location-card {
-    background: var(--bg-blue);
-    padding: 24px;
+    background: var(--white);
+    padding: 28px;
     border-radius: var(--radius);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary-light);
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    flex-direction: column;
+    gap: 0;
+    transition: box-shadow var(--transition), transform var(--transition);
 }
 
-.location-icon {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    background: var(--primary);
-    border-radius: 50%;
+.location-card:hover {
+    box-shadow: 0 4px 20px rgba(26, 82, 118, 0.1);
+    transform: translateY(-2px);
+}
+
+.location-header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
 }
 
-.location-icon svg {
-    width: 20px;
-    height: 20px;
-    stroke: var(--white);
+.location-header svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--primary-light);
     fill: none;
     stroke-width: 2;
+    flex-shrink: 0;
 }
 
 .location-title {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 6px;
+}
+
+.location-body {
+    flex: 1;
 }
 
 .location-detail {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.88rem;
+    line-height: 1.7;
     color: var(--text);
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .location-detail:last-child {
     margin-bottom: 0;
+}
+
+.location-map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.location-map-link svg {
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+.location-map-link:hover {
+    color: var(--primary);
 }
 
 /* ===================== FAQ ===================== */
