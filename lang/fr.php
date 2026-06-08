@@ -21,7 +21,7 @@ $lang = [
     // Hero
     'hero_title' => 'Traitement mini-invasif des nodules thyroïdiens',
     'hero_subtitle' => 'Sans chirurgie. Sans cicatrice. Sous anesthésie locale.',
-    'hero_description' => 'Le Dr Nicolas Villard, expert internationalement reconnu avec plus de 1\'000 traitements réalisés, propose des traitements mini-invasifs des nodules thyroïdiens par radiofréquence à Genève et Lausanne.',
+    'hero_description' => 'Le Dr Nicolas Villard, expert internationalement reconnu avec plus de 1\'000 traitements réalisés, propose des traitements mini-invasifs des nodules thyroïdiens par radiofréquence ou micro-ondes à Genève et Lausanne.',
     'hero_cta' => 'Prendre rendez-vous',
     'hero_learn_more' => 'En savoir plus',
 

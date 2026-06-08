@@ -21,7 +21,7 @@ $lang = [
     // Hero
     'hero_title' => 'Minimally invasive thyroid nodule treatment',
     'hero_subtitle' => 'No surgery. No scar. Under local anaesthesia.',
-    'hero_description' => 'Dr Nicolas Villard, an internationally recognised expert with over 1,000 treatments performed, offers minimally invasive thyroid nodule treatments by radiofrequency ablation in Geneva and Lausanne.',
+    'hero_description' => 'Dr Nicolas Villard, an internationally recognised expert with over 1,000 treatments performed, offers minimally invasive thyroid nodule treatments by radiofrequency or microwave ablation in Geneva and Lausanne.',
     'hero_cta' => 'Book an appointment',
     'hero_learn_more' => 'Learn more',
 
