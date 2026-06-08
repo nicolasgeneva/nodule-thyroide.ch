@@ -12,6 +12,16 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^(www\.)?thyroide\.ch$ [NC]
 RewriteRule ^(.*)$ https://nodule-thyroide.ch/$1 [R=301,L]
 
+# Redirect old ?lang= URLs to /fr or /en
+RewriteCond %{QUERY_STRING} ^lang=(fr|en)$ [NC]
+RewriteRule ^$ /%1? [R=301,L]
+
+# Root redirect to /fr
+RewriteRule ^$ /fr [R=302,L]
+
+# Language routing: /fr and /en -> index.php
+RewriteRule ^(fr|en)$ index.php [L,QSA]
+
 # Security headers
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"

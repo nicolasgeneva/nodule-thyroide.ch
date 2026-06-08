@@ -14,9 +14,9 @@ $lang = [
     'nav_nodules' => 'Les nodules',
     'nav_treatments' => 'Traitements',
     'nav_comparison' => 'RFA vs Chirurgie',
-    'nav_expert' => 'L\'expert',
+    'nav_expert' => 'Dr N. Villard',
     'nav_faq' => 'FAQ',
-    'nav_contact' => 'Prendre rendez-vous',
+    'nav_contact' => 'RDV en ligne',
 
     // Hero
     'hero_title' => 'Traitement mini-invasif des nodules thyroïdiens',
@@ -67,14 +67,14 @@ $lang = [
     'cold_subtitle' => 'Non sécrétant — le plus fréquent',
     'cold_text_1' => 'Ce type de nodule est le plus fréquent. Il ne produit pas d\'hormones thyroïdiennes et est souvent découvert par hasard. On l\'appelle « froid » car il n\'apparaît pas actif sur la scintigraphie thyroïdienne. La plupart ne nécessitent pas de traitement si leur taille est stable et qu\'ils ne provoquent pas de gêne.',
     'cold_text_2' => 'Lorsqu\'ils sont volumineux ou qu\'ils augmentent de taille, ils peuvent être à l\'origine de symptômes cosmétiques/esthétiques (gonflement du cou, masse visible) ou compressifs (gêne/inconfort ou pression dans le cou, difficultés à avaler, toux sèche réflexe).',
-    'cold_treatment' => 'Le traitement de première intention est l\'ablation par radiofréquence ou micro-ondes, réalisée par le radiologue interventionnel. La chirurgie est désormais considérée comme un traitement de seconde intention en raison de son caractère plus invasif et de son coût plus élevé. Lorsqu\'un nodule bénin possède une composante kystique (liquide) importante, on peut également le traiter par alcoolisation.',
+    'cold_treatment' => 'Le traitement de première intention est la thermoablation (RFA ou MWA), réalisée par le radiologue interventionnel. La chirurgie est désormais considérée comme un traitement de seconde intention en raison de son caractère plus invasif et de son coût plus élevé. Lorsqu\'un nodule bénin possède une composante kystique (liquide) importante, on peut également le traiter par alcoolisation.',
 
     // Hot nodule
     'hot_title' => 'Nodule autonome « chaud »',
     'hot_subtitle' => 'Sécrétant — peut provoquer une hyperthyroïdie',
     'hot_text_1' => 'Dans ce cas, le nodule produit des hormones thyroïdiennes de manière indépendante, sans contrôle par la TSH. On parle de nodule « chaud » car il apparaît actif à la scintigraphie. Il peut provoquer une hyperthyroïdie, avec des symptômes comme une nervosité, une perte de poids ou des palpitations. Ce type de nodule est presque toujours bénin.',
     'hot_text_2' => 'Un traitement est en général nécessaire car l\'hyperthyroïdie non traitée peut s\'avérer dangereuse pour la santé, affectant gravement le cœur, les os, le cerveau et l\'état général, d\'autant plus chez les personnes âgées ou fragiles.',
-    'hot_treatment' => 'De nos jours, la quasi-totalité des nodules thyroïdiens autonomes peuvent être traités par radiofréquence par le radiologue interventionnel. Les traitements alternatifs comprennent la chirurgie et le traitement par injection d\'iode radioactif (radio-iode).',
+    'hot_treatment' => 'De nos jours, la quasi-totalité des nodules thyroïdiens autonomes peuvent être traités par thermoablation (RFA ou MWA) par le radiologue interventionnel. Les traitements alternatifs comprennent la chirurgie et le traitement par injection d\'iode radioactif (radio-iode).',
 
     // Multinodular
     'multi_title' => 'Goitre multinodulaire',
@@ -97,9 +97,9 @@ $lang = [
     'treatments_ambul' => 'Lorsque le nodule cible est petit et central, le traitement peut être réalisé en ambulatoire. Pour les plus gros nodules, en particulier ceux qui sont sous-capsulaires ou proches des régions « à risque », il est préférable de réaliser le traitement durant une courte hospitalisation pour une meilleure surveillance post-opératoire.',
 
     // Thermoablation
-    'thermo_title' => 'Thermoablation (RFA / Micro-ondes)',
+    'thermo_title' => 'Thermoablation (RFA / MWA)',
     'thermo_concept' => 'La thermoablation est un traitement mini-invasif qui consiste à insérer, sous contrôle de l\'imagerie (le plus souvent par échographie), une fine aiguille dont l\'extrémité chauffe dans la lésion cible pour la détruire. L\'opérateur réalise de multiples petites ablations en déplaçant successivement l\'aiguille dans la lésion pour obtenir un traitement complet. Les cellules sont ainsi « cuites » par la chaleur, puis les débris cellulaires sont progressivement résorbés par l\'organisme.',
-    'thermo_tech' => 'Plusieurs technologies d\'aiguille existent. Le plus souvent on utilise une aiguille à radiofréquence. Cette modalité est contre-indiquée en cas d\'implant cochléaire, de stimulateur cardiaque (pacemaker ou défibrillateur) ou de grossesse. Une aiguille à micro-ondes peut alors être utilisée. L\'aiguille de cryoablation, produisant une boule de glace, peut être utilisée lorsque la lésion est au contact de structures fragiles ne pouvant pas être éloignées par hydrodissection.',
+    'thermo_tech' => 'Deux technologies principales sont utilisées : la <strong>radiofréquence (RFA)</strong> et les <strong>micro-ondes (MWA)</strong>. L\'efficacité et la sécurité des deux techniques sont comparables. La seule différence significative concerne les contre-indications : la RFA est contre-indiquée en cas de grossesse, d\'implant cochléaire, de stimulateur cardiaque (pacemaker) ou de défibrillateur implanté. Dans ces situations, les micro-ondes (MWA) constituent une alternative sûre. Plus rarement, la cryoablation (aiguille produisant une boule de glace) peut être utilisée lorsque la lésion est au contact de structures fragiles ne pouvant pas être éloignées par hydrodissection.',
 
     // Procedure steps
     'steps_title' => 'Déroulement du traitement',
@@ -270,7 +270,7 @@ $lang = [
         ],
         [
             'q' => 'Le nodule peut-il repousser après traitement ?',
-            'a' => 'La repousse ou récidive est possible mais relativement rare (environ 5 à 15 % des cas selon les études). C\'est pourquoi un suivi échographique régulier est essentiel. En cas de traitement incomplet ou de récidive, une séance de traitement complémentaire peut être facilement réalisée.'
+            'a' => 'Dans la littérature, un taux de repousse de 5 à 15 % est rapporté. Cela s\'explique par le fait que la plupart des opérateurs se contentent de détruire la partie centrale du nodule, laissant des cellules viables en périphérie. Le Dr Villard a fait évoluer la technique et le paradigme en visant systématiquement une destruction complète du nodule, bord à bord, grâce à la technique du moving-shot combinée à l\'hydrodissection. Lorsque le nodule est entièrement détruit, la repousse ou récidive devient quasi impossible. Un suivi échographique régulier reste néanmoins recommandé pour le confirmer.'
         ],
         [
             'q' => 'Comment se passe le suivi après traitement ?',

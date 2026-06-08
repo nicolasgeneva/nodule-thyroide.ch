@@ -1,10 +1,17 @@
 <?php
 $supported_langs = ['fr', 'en'];
-$current_lang = isset($_GET['lang']) && in_array($_GET['lang'], $supported_langs) ? $_GET['lang'] : 'fr';
+$uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+if (in_array($uri, $supported_langs)) {
+    $current_lang = $uri;
+} elseif (isset($_GET['lang']) && in_array($_GET['lang'], $supported_langs)) {
+    $current_lang = $_GET['lang'];
+} else {
+    $current_lang = 'fr';
+}
 require_once __DIR__ . '/lang/' . $current_lang . '.php';
 $base_url = 'https://nodule-thyroide.ch';
-$other_lang_url = '?lang=' . $lang['other_lang'];
-$canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
+$other_lang_url = '/' . $lang['other_lang'];
+$canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
 ?>
 <!DOCTYPE html>
 <html lang="<?= $lang['lang_code'] ?>">
@@ -15,9 +22,9 @@ $canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
     <meta name="description" content="<?= $lang['meta_description'] ?>">
     <meta name="keywords" content="<?= $lang['meta_keywords'] ?>">
     <link rel="canonical" href="<?= $canonical ?>">
-    <link rel="alternate" hreflang="fr" href="<?= $base_url ?>">
-    <link rel="alternate" hreflang="en" href="<?= $base_url ?>?lang=en">
-    <link rel="alternate" hreflang="x-default" href="<?= $base_url ?>">
+    <link rel="alternate" hreflang="fr" href="<?= $base_url ?>/fr">
+    <link rel="alternate" hreflang="en" href="<?= $base_url ?>/en">
+    <link rel="alternate" hreflang="x-default" href="<?= $base_url ?>/fr">
 
     <!-- Open Graph -->
     <meta property="og:title" content="<?= $lang['site_title'] ?>">
@@ -144,7 +151,7 @@ $canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
 <!-- ===================== HEADER ===================== -->
 <header class="header" role="banner">
     <div class="header-inner">
-        <a href="?lang=<?= $current_lang ?>" class="logo">nodule-thyroide<span>.ch</span></a>
+        <a href="/<?= $current_lang ?>" class="logo">nodule-thyroide<span>.ch</span></a>
         <nav class="nav" role="navigation" aria-label="<?= $current_lang === 'fr' ? 'Navigation principale' : 'Main navigation' ?>">
             <a href="#thyroide"><?= $lang['nav_thyroid'] ?></a>
             <a href="#nodules"><?= $lang['nav_nodules'] ?></a>
@@ -152,7 +159,7 @@ $canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
             <a href="#comparaison"><?= $lang['nav_comparison'] ?></a>
             <a href="#expert"><?= $lang['nav_expert'] ?></a>
             <a href="#faq"><?= $lang['nav_faq'] ?></a>
-            <a href="#contact" class="nav-cta"><?= $lang['nav_contact'] ?></a>
+            <a href="#rdv" class="nav-cta"><?= $lang['nav_contact'] ?></a>
             <a href="<?= $other_lang_url ?>" class="lang-switch" aria-label="<?= $current_lang === 'fr' ? 'Switch to English' : 'Passer en français' ?>"><?= $lang['other_lang_name'] ?></a>
         </nav>
         <button class="hamburger" aria-label="Menu" aria-expanded="false">
@@ -171,7 +178,7 @@ $canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
             <p class="subtitle"><?= $lang['hero_subtitle'] ?></p>
             <p><?= $lang['hero_description'] ?></p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary"><?= $lang['hero_cta'] ?></a>
+                <a href="#rdv" class="btn btn-primary"><?= $lang['hero_cta'] ?></a>
                 <a href="#thyroide" class="btn btn-outline"><?= $lang['hero_learn_more'] ?></a>
             </div>
         </div>
@@ -353,6 +360,21 @@ $canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
             </div>
         </div>
 
+        <!-- Moving-shot technique -->
+        <div class="content-with-image reverse mt-40">
+            <div>
+                <h3 class="section-title" style="font-size:1.3rem;"><?= $current_lang === 'fr' ? 'Technique du moving-shot : vers une destruction complète' : 'Moving-shot technique: towards complete destruction' ?></h3>
+                <div class="content-block">
+                    <p><?= $current_lang === 'fr'
+                        ? 'Le Dr Villard a fait évoluer la technique en visant systématiquement une <strong>destruction complète du nodule, bord à bord</strong>. Alors que la plupart des opérateurs se contentent de détruire la partie centrale du nodule, cette approche exhaustive combinée à l\'hydrodissection systématique rend la repousse quasi impossible.'
+                        : 'Dr Villard has advanced the technique by systematically targeting <strong>complete nodule destruction, edge to edge</strong>. While most operators only destroy the central part of the nodule, this comprehensive approach combined with systematic hydrodissection makes regrowth virtually impossible.' ?></p>
+                </div>
+            </div>
+            <div class="content-image">
+                <img src="images/movingshot.png" alt="<?= $current_lang === 'fr' ? 'Technique du moving-shot : destruction complète du nodule par déplacements successifs de l\'aiguille' : 'Moving-shot technique: complete nodule destruction through successive needle movements' ?>" width="503" height="550" loading="lazy">
+            </div>
+        </div>
+
         <!-- Procedure steps -->
         <h3 class="section-title mt-40" style="font-size:1.3rem;"><?= $lang['steps_title'] ?></h3>
         <div class="steps-list">
@@ -385,41 +407,42 @@ $canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
         </div>
 
         <!-- Follow-up -->
-        <div class="content-with-image reverse mt-40">
-            <div>
-                <h3 class="section-title" style="font-size:1.3rem;"><?= $lang['followup_title'] ?></h3>
-                <div class="content-block">
-                    <p><?= $lang['followup_text_1'] ?></p>
-                    <p><?= $lang['followup_text_2'] ?></p>
-                    <p><?= $lang['followup_text_3'] ?></p>
-                    <p><?= $lang['followup_text_4'] ?></p>
-                    <p><?= $lang['followup_text_5'] ?></p>
-                </div>
+        <div class="mt-40">
+            <h3 class="section-title" style="font-size:1.3rem;"><?= $lang['followup_title'] ?></h3>
+            <div class="content-block">
+                <p><?= $lang['followup_text_1'] ?></p>
+                <p><?= $lang['followup_text_2'] ?></p>
+                <p><?= $lang['followup_text_3'] ?></p>
             </div>
-            <div class="content-image">
-                <img src="images/evolution-nodule.png" alt="<?= $current_lang === 'fr' ? 'Évolution d\'un nodule thyroïdien après traitement par radiofréquence : réduction progressive de la taille' : 'Thyroid nodule evolution after radiofrequency treatment: progressive size reduction' ?>" width="700" height="200" loading="lazy">
+            <div class="evolution-image">
+                <img src="images/evolution-nodule.png" alt="<?= $current_lang === 'fr' ? 'Évolution d\'un nodule thyroïdien après traitement par radiofréquence : réduction progressive de la taille' : 'Thyroid nodule evolution after radiofrequency treatment: progressive size reduction' ?>" loading="lazy">
+                <p class="evolution-caption"><?= $current_lang === 'fr' ? 'Évolution progressive du nodule après thermoablation : réduction de 65 à 85 % du volume' : 'Progressive nodule evolution after thermoablation: 65–85% volume reduction' ?></p>
+            </div>
+            <div class="content-block" style="margin-top:24px;">
+                <p><?= $lang['followup_text_4'] ?></p>
+                <p><?= $lang['followup_text_5'] ?></p>
             </div>
         </div>
 
         <!-- Side effects -->
         <div class="mt-40">
             <h3 class="section-title" style="font-size:1.3rem;"><?= $lang['side_effects_title'] ?></h3>
-            <p class="mb-40" style="font-weight:500;color:var(--success);"><?= $lang['side_effects_intro'] ?></p>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
-                <div class="nodule-card" style="border-left-color:var(--accent-light);">
-                    <h3 style="font-size:1.05rem;"><?= $lang['side_effect_1_title'] ?></h3>
+            <p style="font-weight:500;color:var(--success);margin-bottom:24px;"><?= $lang['side_effects_intro'] ?></p>
+            <div class="side-effects-list">
+                <div class="side-effect-item">
+                    <h4><?= $lang['side_effect_1_title'] ?></h4>
                     <p><?= $lang['side_effect_1_text'] ?></p>
                 </div>
-                <div class="nodule-card" style="border-left-color:var(--accent-light);">
-                    <h3 style="font-size:1.05rem;"><?= $lang['side_effect_2_title'] ?></h3>
+                <div class="side-effect-item">
+                    <h4><?= $lang['side_effect_2_title'] ?></h4>
                     <p><?= $lang['side_effect_2_text'] ?></p>
                 </div>
-                <div class="nodule-card" style="border-left-color:var(--accent-light);">
-                    <h3 style="font-size:1.05rem;"><?= $lang['side_effect_3_title'] ?></h3>
+                <div class="side-effect-item">
+                    <h4><?= $lang['side_effect_3_title'] ?></h4>
                     <p><?= $lang['side_effect_3_text'] ?></p>
                 </div>
-                <div class="nodule-card" style="border-left-color:var(--success);">
-                    <h3 style="font-size:1.05rem;"><?= $lang['side_effect_4_title'] ?></h3>
+                <div class="side-effect-item side-effect-positive">
+                    <h4><?= $lang['side_effect_4_title'] ?></h4>
                     <p><?= $lang['side_effect_4_text'] ?></p>
                 </div>
             </div>
@@ -483,13 +506,13 @@ $canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
                 <div class="location-icon">
                     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
-                <p><strong>Genève</strong><br><?= $lang['expert_location_ge'] ?></p>
+                <p><strong>Genève</strong></p>
             </div>
             <div class="location-card">
                 <div class="location-icon">
                     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
-                <p><strong>Lausanne</strong><br><?= $lang['expert_location_la'] ?></p>
+                <p><strong>Lausanne</strong></p>
             </div>
         </div>
 
@@ -539,14 +562,28 @@ $canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
         <div class="cta-contact-info">
             <div class="cta-contact-item">
                 <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span><?= $lang['contact_phone'] ?> : <a href="tel:+41000000000">+41 00 000 00 00</a></span>
+                <span><?= $lang['contact_phone'] ?> : <a href="tel:+41582553144">+41 58 255 3 144</a></span>
             </div>
             <div class="cta-contact-item">
                 <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span><?= $lang['contact_email'] ?> : <a href="mailto:contact@nodule-thyroide.ch">contact@nodule-thyroide.ch</a></span>
+                <span><?= $lang['contact_email'] ?> : <a href="mailto:secretariat@drvillard.ch">secretariat@drvillard.ch</a></span>
             </div>
         </div>
         <p class="cta-tip"><?= $lang['contact_tip'] ?></p>
+    </div>
+</section>
+
+<!-- ===================== BOOKING WIDGET ===================== -->
+<section class="section" id="rdv">
+    <div class="container">
+        <h2 class="section-title text-center"><?= $current_lang === 'fr' ? 'Prendre rendez-vous en ligne' : 'Book an appointment online' ?></h2>
+        <p class="section-subtitle" style="text-align:center;margin:0 auto 32px;"><?= $current_lang === 'fr' ? 'Sélectionnez un créneau directement en ligne pour une consultation à Genève ou Lausanne.' : 'Select a time slot online for a consultation in Geneva or Lausanne.' ?></p>
+        <iframe id="janus-widget"
+            src="https://januswidget.villard.swiss/rendez-vous/dr/5?lang=<?= $current_lang ?>"
+            style="width:100%;min-height:600px;border:none;border-radius:12px;"
+            loading="lazy"
+            title="<?= $current_lang === 'fr' ? 'Prise de rendez-vous en ligne' : 'Online appointment booking' ?>">
+        </iframe>
     </div>
 </section>
 
@@ -556,9 +593,67 @@ $canonical = $current_lang === 'fr' ? $base_url : $base_url . '?lang=en';
         <p><?= $lang['footer_copyright'] ?></p>
         <p><?= $lang['footer_disclaimer'] ?></p>
         <p><a href="https://www.sciencedirect.com/science/article/pii/S2543343126000618" target="_blank" rel="noopener"><?= $lang['footer_reco'] ?></a></p>
+        <p><a href="#privacy" class="privacy-link"><?= $current_lang === 'fr' ? 'Politique de confidentialité' : 'Privacy policy' ?></a></p>
     </div>
 </footer>
 
+<!-- ===================== COOKIE BANNER (nLPD / RGPD) ===================== -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="<?= $current_lang === 'fr' ? 'Consentement cookies' : 'Cookie consent' ?>" style="display:none;">
+    <div class="cookie-inner">
+        <p>
+            <?php if ($current_lang === 'fr'): ?>
+                Ce site utilise des cookies strictement nécessaires à son fonctionnement. Aucun cookie de traçage ou publicitaire n'est utilisé. En poursuivant votre navigation, vous acceptez l'utilisation de ces cookies. <a href="#privacy" class="cookie-link">Politique de confidentialité</a>
+            <?php else: ?>
+                This site uses cookies strictly necessary for its operation. No tracking or advertising cookies are used. By continuing to browse, you accept the use of these cookies. <a href="#privacy" class="cookie-link">Privacy policy</a>
+            <?php endif; ?>
+        </p>
+        <button id="cookie-accept" class="btn btn-blue" style="padding:10px 24px;font-size:0.9rem;"><?= $current_lang === 'fr' ? 'Accepter' : 'Accept' ?></button>
+    </div>
+</div>
+
+<!-- ===================== PRIVACY POLICY MODAL ===================== -->
+<div id="privacy" class="privacy-section" style="display:none;">
+    <div class="container" style="padding:60px 24px;">
+        <button class="privacy-close" onclick="document.getElementById('privacy').style.display='none';history.replaceState(null,'','/<?= $current_lang ?>');" aria-label="<?= $current_lang === 'fr' ? 'Fermer' : 'Close' ?>">&times;</button>
+        <?php if ($current_lang === 'fr'): ?>
+        <h2 class="section-title">Politique de confidentialité</h2>
+        <p><strong>Responsable du traitement des données</strong><br>Dr Nicolas Villard — Versatile Imaging Sàrl<br>Genève / Lausanne, Suisse<br>Contact : <a href="mailto:secretariat@drvillard.ch">secretariat@drvillard.ch</a></p>
+        <h3>Données collectées</h3>
+        <p>Ce site ne collecte aucune donnée personnelle de manière active. Aucun formulaire de contact, aucun outil d'analyse (Google Analytics, etc.) et aucun cookie publicitaire ou de traçage ne sont utilisés. Seuls des cookies strictement nécessaires au fonctionnement du site (préférence de langue) peuvent être déposés.</p>
+        <h3>Widget de prise de rendez-vous</h3>
+        <p>Le widget de prise de rendez-vous intégré (Janus) est un service tiers. Les données que vous saisissez dans ce widget sont traitées par ce service conformément à sa propre politique de confidentialité. Le Dr Villard est responsable du traitement de ces données dans le cadre de la relation médecin-patient.</p>
+        <h3>Vos droits</h3>
+        <p>Conformément à la nouvelle Loi fédérale sur la protection des données (nLPD, Suisse) et au Règlement Général sur la Protection des Données (RGPD, UE/France), vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données personnelles. Vous pouvez exercer ces droits en contactant <a href="mailto:secretariat@drvillard.ch">secretariat@drvillard.ch</a>.</p>
+        <h3>Hébergement</h3>
+        <p>Ce site est hébergé par Infomaniak Network SA, Genève, Suisse. Les données sont stockées exclusivement en Suisse.</p>
+        <p><em>Dernière mise à jour : juin 2026</em></p>
+        <?php else: ?>
+        <h2 class="section-title">Privacy policy</h2>
+        <p><strong>Data controller</strong><br>Dr Nicolas Villard — Versatile Imaging Sàrl<br>Geneva / Lausanne, Switzerland<br>Contact: <a href="mailto:secretariat@drvillard.ch">secretariat@drvillard.ch</a></p>
+        <h3>Data collected</h3>
+        <p>This site does not actively collect any personal data. No contact forms, no analytics tools (Google Analytics, etc.) and no advertising or tracking cookies are used. Only cookies strictly necessary for the site's operation (language preference) may be stored.</p>
+        <h3>Appointment booking widget</h3>
+        <p>The integrated appointment booking widget (Janus) is a third-party service. The data you enter in this widget is processed by this service in accordance with its own privacy policy. Dr Villard is responsible for processing this data within the doctor-patient relationship.</p>
+        <h3>Your rights</h3>
+        <p>In accordance with the Swiss Federal Data Protection Act (nFADP) and the General Data Protection Regulation (GDPR, EU/France), you have the right to access, rectify, delete and port your personal data. You may exercise these rights by contacting <a href="mailto:secretariat@drvillard.ch">secretariat@drvillard.ch</a>.</p>
+        <h3>Hosting</h3>
+        <p>This site is hosted by Infomaniak Network SA, Geneva, Switzerland. Data is stored exclusively in Switzerland.</p>
+        <p><em>Last updated: June 2026</em></p>
+        <?php endif; ?>
+    </div>
+</div>
+
 <script src="js/main.js"></script>
+<script>
+window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'janus-resize') {
+        document.getElementById('janus-widget').style.height = e.data.height + 'px';
+    }
+    if (e.data && e.data.type === 'janus-step-change') {
+        var el = document.getElementById('rdv');
+        if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+});
+</script>
 </body>
 </html>

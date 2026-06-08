@@ -14,9 +14,9 @@ $lang = [
     'nav_nodules' => 'Nodules',
     'nav_treatments' => 'Treatments',
     'nav_comparison' => 'RFA vs Surgery',
-    'nav_expert' => 'The expert',
+    'nav_expert' => 'Dr N. Villard',
     'nav_faq' => 'FAQ',
-    'nav_contact' => 'Book an appointment',
+    'nav_contact' => 'Book online',
 
     // Hero
     'hero_title' => 'Minimally invasive thyroid nodule treatment',
@@ -67,14 +67,14 @@ $lang = [
     'cold_subtitle' => 'Non-functioning — the most common type',
     'cold_text_1' => 'This is the most common type. It does not produce thyroid hormones and is often discovered incidentally. It is called "cold" because it does not appear active on thyroid scintigraphy. Most do not require treatment if they remain stable in size and cause no symptoms.',
     'cold_text_2' => 'When they are large or growing, they may cause cosmetic symptoms (neck swelling, visible mass) or compressive symptoms (discomfort, pressure in the neck, difficulty swallowing, dry cough).',
-    'cold_treatment' => 'Radiofrequency or microwave ablation, performed by an interventional radiologist, is now considered the first-line treatment. Surgery is now regarded as a second-line treatment due to its more invasive nature and higher cost. Nodules with a significant cystic (fluid) component can also be treated by ethanol ablation.',
+    'cold_treatment' => 'Thermoablation (RFA or MWA), performed by an interventional radiologist, is now considered the first-line treatment. Surgery is now regarded as a second-line treatment due to its more invasive nature and higher cost. Nodules with a significant cystic (fluid) component can also be treated by ethanol ablation.',
 
     // Hot nodule
     'hot_title' => 'Autonomous "hot" nodule',
     'hot_subtitle' => 'Functioning — may cause hyperthyroidism',
     'hot_text_1' => 'In this case, the nodule produces thyroid hormones independently, without TSH control. It is called "hot" because it appears active on scintigraphy. It can cause hyperthyroidism with symptoms such as nervousness, weight loss or palpitations. This type of nodule is almost always benign.',
     'hot_text_2' => 'Treatment is generally necessary because untreated hyperthyroidism can be dangerous, seriously affecting the heart, bones, brain and general health, particularly in elderly or frail patients.',
-    'hot_treatment' => 'Today, virtually all autonomous thyroid nodules can be treated by radiofrequency by an interventional radiologist. Alternative treatments include surgery and radioactive iodine therapy.',
+    'hot_treatment' => 'Today, virtually all autonomous thyroid nodules can be treated by thermoablation (RFA or MWA) by an interventional radiologist. Alternative treatments include surgery and radioactive iodine therapy.',
 
     // Multinodular
     'multi_title' => 'Multinodular goitre',
@@ -97,9 +97,9 @@ $lang = [
     'treatments_ambul' => 'When the target nodule is small and centrally located, treatment can be performed as an outpatient procedure. For larger nodules, particularly those that are subcapsular or near critical structures, a short hospitalisation is preferred for better post-operative monitoring.',
 
     // Thermoablation
-    'thermo_title' => 'Thermoablation (RFA / Microwave)',
+    'thermo_title' => 'Thermoablation (RFA / MWA)',
     'thermo_concept' => 'Thermoablation is a minimally invasive treatment that involves inserting a fine needle into the target lesion under imaging guidance (usually ultrasound). The needle tip generates heat to destroy the lesion. The operator performs multiple small ablations by moving the needle through the lesion for complete treatment. The cells are destroyed by heat, and the cellular debris is gradually resorbed by the body.',
-    'thermo_tech' => 'Several needle technologies exist. Radiofrequency is most commonly used, but is contraindicated with cochlear implants, cardiac pacemakers/defibrillators or during pregnancy. Microwave needles can be used in these situations. Cryoablation needles, which create a small ice ball, may be used when the lesion is adjacent to fragile structures that cannot be separated by hydrodissection.',
+    'thermo_tech' => 'Two main technologies are used: <strong>radiofrequency ablation (RFA)</strong> and <strong>microwave ablation (MWA)</strong>. Both techniques have comparable efficacy and safety. The only significant difference concerns contraindications: RFA is contraindicated during pregnancy, with cochlear implants, cardiac pacemakers or implanted defibrillators. In these situations, microwave ablation (MWA) is a safe alternative. Less commonly, cryoablation (a needle producing an ice ball) may be used when the lesion is adjacent to fragile structures that cannot be separated by hydrodissection.',
 
     // Procedure steps
     'steps_title' => 'Procedure steps',
@@ -270,7 +270,7 @@ $lang = [
         ],
         [
             'q' => 'Can the nodule regrow after treatment?',
-            'a' => 'Regrowth or recurrence is possible but relatively uncommon (approximately 5–15% of cases). This is why regular ultrasound follow-up is essential. If treatment is incomplete or there is recurrence, a supplementary treatment session can be easily performed.'
+            'a' => 'In the literature, a regrowth rate of 5–15% is reported. This is because most operators only destroy the central part of the nodule, leaving viable cells at the periphery. Dr Villard has advanced the technique and paradigm by systematically targeting complete nodule destruction, edge to edge, using the moving-shot technique combined with hydrodissection. When the nodule is entirely destroyed, regrowth or recurrence becomes virtually impossible. Regular ultrasound follow-up is nevertheless recommended to confirm this.'
         ],
         [
             'q' => 'What does post-treatment follow-up involve?',
