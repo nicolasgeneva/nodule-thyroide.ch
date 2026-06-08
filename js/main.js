@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var navLinks = document.querySelectorAll('.nav a');
     var faqItems = document.querySelectorAll('.faq-item');
 
-    var sectionLinks = document.querySelectorAll('.nav a[href^="#"]');
+    var sectionLinks = document.querySelectorAll('.nav a[href^="#"]:not(.nav-cta):not(.lang-switch)');
     var sections = [];
     sectionLinks.forEach(function(link) {
         var id = link.getAttribute('href').substring(1);
