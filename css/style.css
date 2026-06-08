@@ -1042,13 +1042,33 @@ a:hover {
     }
 
     .nav a {
-        padding: 12px 16px;
+        padding: 10px 16px;
         width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .nav a::after {
+        display: none;
+    }
+
+    .nav a.active {
+        background: var(--bg-blue);
+        border-radius: 8px;
+        color: var(--primary);
     }
 
     .nav .nav-cta {
         margin-left: 0;
+        margin-top: 8px;
         text-align: center;
+    }
+
+    .nav .lang-switch {
+        margin-left: 0;
+        margin-top: 4px;
+        align-self: flex-start;
+        font-size: 1.8rem;
+        padding: 8px 14px;
     }
 
     .hamburger {
