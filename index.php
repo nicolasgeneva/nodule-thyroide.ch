@@ -21,7 +21,7 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5JDZSV7S');</script>
+    })(window,document,'script','dataLayer','GTM-PW8M8CRN');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -194,7 +194,7 @@ $canonical = $current_lang === 'fr' ? $base_url . '/fr' : $base_url . '/en';
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JDZSV7S"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW8M8CRN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
